@@ -21,39 +21,6 @@
           </button>
 
           {% endfor %}
-      
-		  {% comment %}
-          {% for variant in product.variants %}
-            <button
-            type="button"
-            class="product-thumbnails__item-link" 
-            data-button="{{ variant.title }}"
-            data-product-thumbnail
-          >
-            {% render 'image' with
-              image: variant.featured_media.preview_image,
-              id: media.id
-              wrapper_class: 'product-thumbnails__item-image',
-              disable_style: true
-            %}
-
-            {% case media.media_type %}
-              {% when 'video' %}
-                <div class="product-thumbnails__item-badge">
-                  {% render 'icon' with icon: 'play-badge' %}
-                </div>
-              {% when 'external_video' %}
-                <div class="product-thumbnails__item-badge">
-                  {% render 'icon' with icon: 'play-badge' %}
-                </div>
-              {% when 'model' %}
-                <div class="product-thumbnails__item-badge">
-                  {% render 'icon' with icon: '3d-badge' %}
-                </div>
-            {% endcase %}
-          </button>
-          {%- endfor -%}
-      	  {% endcomment %}
           
         </div>
       </div>
