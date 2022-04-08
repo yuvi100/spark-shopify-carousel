@@ -27,7 +27,7 @@
   $('.product__color-swatches').on('click', function(){
     var activeContainer = document.querySelectorAll('.product__color-swatches .selected');
         
-    $('.variant_name').text($(activeContainer).attr("data-button"));
+    $('.variant_name').text($(activeContainer).attr("data-label"));
     
   });
   $('.product__color-swatches').on('click', function(){
@@ -36,13 +36,13 @@
   });
   $(function() {
       var activeContainer = document.querySelectorAll('.product__color-swatches .selected');
-      $('.variant_name').text($(activeContainer).attr("data-button"));
+      $('.variant_name').text($(activeContainer).attr("data-label"));
       var slideno = $(".product__media-item:not(.hidden)").data('slick-index')
       $('.product__media').slick('slickGoTo', slideno);
   });
   $('.product__color-swatches').on('click', function(){
     var activeContainer = document.querySelectorAll('.product__color-swatches .selected');
-    $('.variant_name').text($(activeContainer).attr("data-button"));
+    $('.variant_name').text($(activeContainer).attr("data-label"));
   });
 </script>
 <style>
