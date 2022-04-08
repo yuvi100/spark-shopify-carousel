@@ -1,26 +1,21 @@
 {% if product.media.size > 1 %}
-<div class="product__thumbnails-wrapper">
-	<div class="product__thumbnails__slider" data-product-thumbnails>
-      
-      	  {% for image in product.images %}
+	<div class="product__thumbnails-wrapper">
+		<div class="product__thumbnails__slider" data-product-thumbnails>
 
-              <button
-            type="button"
-            class="product-thumbnails__item-link"
-            data-button="{{ forloop.index }}"
-            data-product-thumbnail
-          >
+			{% for image in product.images %}
 
-            {% render 'image' with
-              image: image,
-              id: image.id
-              wrapper_class: 'product-thumbnails__item-image',
-              disable_style: true
-            %}
-            </button>
+			<button type="button" class="product-thumbnails__item-link" data-product-thumbnail>
 
-          {% endfor %}
-          
-        </div>
-      </div>
+				{% render 'image' with
+				  image: image,
+				  id: image.id
+				  wrapper_class: 'product-thumbnails__item-image',
+				  disable_style: true
+				%}
+			</button>
+
+			{% endfor %}
+
+		</div>
+	</div>
 {% endif %}
